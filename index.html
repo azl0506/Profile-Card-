@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      display: flex;
+      justify-content: center;
+      padding-top: 40px;
+    }
+
+    .card {
+      width: 250px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 20px;
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .card h2 {
+      margin: 12px 0 8px;
+    }
+
+    .card p {
+      color: #555;
+      margin: 6px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="card-container"></div>
+
+  <script>
+    let container = document.getElementById("card-container")
+    const card = document.createElement("div")
+    card.className = "card";
+
+    const image = document.createElement("img")
+    image.src = "avatar.png";
+    image.alt = "Profile Pic"
+
+    const newh2 = document.createElement("h2")
+    newh2.textContent = "John Doe";
+
+    const newp = document.createElement("p")
+    newp.textContent = "Web Developer";
+
+    const newp2 = document.createElement("p")
+    newp2.textContent = "Phoenix, Arizona";
+    
+    card.appendChild(image)
+    card.appendChild(newh2)
+    card.appendChild(newp)
+    card.appendChild(newp2)
+    container.appendChild(card)
+
+  </script>
+</body>
+</html>
